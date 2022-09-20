@@ -1,0 +1,68 @@
+.RightPanel{
+    width: 35%;
+    margin: 15px 0px 15px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.Input{
+    border-radius: 5px;
+    margin: 0px;
+    width: 100%;
+    height: 50%;
+    padding: 5px 0px 0px 10px;
+    resize: none;
+    color: rgb(215, 207, 207);
+    font-size: 0.5rem;
+    background-color: #252526;
+    min-height: 150px;
+    box-shadow: -3px -3px 10px 0px grey;
+}
+
+.Output{
+    border-radius: 5px;
+    margin: 0px;
+    width: 100%;
+    height: 50%;
+    padding: 5px 0px 0px 10px;
+    resize: none;
+    color: rgb(215, 207, 207);
+    font-size: 0.5rem;
+    background-color: #252526;
+    min-height: 150px;
+    box-shadow: -3px -3px 10px 0px grey;
+}
+
+.Loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttons{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    align-items: center;
+    
+}
+
+.buttons button{
+    padding: 5px;
+    margin: 10px 15px 10px 0px; 
+    font-weight: 700;
+    cursor:pointer;
+    border-radius: 5px;
+    border: 1px solid black;
+    box-shadow: -2px -2px 3px -1px grey;
+
+}
+.buttons button:hover{
+    transform: scale(1.05);
+}
+.RightReset{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+}

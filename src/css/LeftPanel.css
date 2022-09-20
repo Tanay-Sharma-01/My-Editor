@@ -1,0 +1,43 @@
+.LeftPanel{
+    width: 55%;
+    margin: 15px 0px 15px 0px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.Space{
+    height: 10px;
+}
+.Selector{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Selector .Box{
+    background-color: #252526;
+    color: rgb(215, 207, 207);
+    border-radius: 5px;
+    padding: 2px;
+}
+.Selector .Box:hover{
+    cursor: pointer;
+}
+.Reset{
+    border: 1px solid black;
+    color:  rgb(215, 207, 207);
+    background-color: #252526;
+    padding: 2px;
+    border-radius: 5px;
+}
+.Reset:hover{
+    transform: scale(1.05);
+}
+.Reset:hover{
+    cursor: pointer;
+}
+.Editor{
+    box-shadow: -4px -4px 10px 0px grey;
+    border-radius: 5px;
+    border : 1px solid black;
+}
