@@ -2,7 +2,6 @@ import React, { useContext, useState } from "react";
 import "./css/RightPanel.css";
 import { context } from "./Data";
 import { BeatLoader } from "react-spinners";
-// import Editor from "@monaco-editor/react";
 import { BiReset } from "react-icons/bi";
 
 function RightPanel() {
@@ -12,7 +11,8 @@ function RightPanel() {
   const data = useContext(context);
   const [code, setCode] = data.code;
   const [input, setInput] = data.input;
-
+  const [currentLang] = data.currentLang;
+  const [languages] = data.lang;
   const [output, setOutput] = useState("Your output comes here");
   const [showLoader, setShowLoader] = useState(false);
 
@@ -29,7 +29,7 @@ function RightPanel() {
       str4;
 
     const _64EncodedCode = btoa(str);
-    const _64EncodedInput = btoa(str);
+    const _64EncodedInput = btoa("");
 
     const options = {
       method: "POST",
@@ -40,11 +40,7 @@ function RightPanel() {
         "X-RapidAPI-Host": "judge0-ce.p.rapidapi.com",
       },
       body:
-        '{"language_id":63,"source_code":"' +
-        _64EncodedCode +
-        '","stdin":"' +
-        _64EncodedInput +
-        '"}',
+      '{"language_id":'+languages[currentLang]+',"source_code":"'+_64EncodedCode+'","stdin":"'+_64EncodedInput+'"}'
     };
 
     fetch(

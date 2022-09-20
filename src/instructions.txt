@@ -5,6 +5,13 @@ After clicking on run Firstly Post request will be send to the server, to run th
 
 
 
-Now there are some streps that are needed to be taken like --> According to the question you need to create some sample test cases . That sample test case should be given in the question so that user can use that sample testcase to jusge its output.Atlast there should be some hidden testcases referred to every question and that code should be judged on the basis of these test cases and whatever will be the output of these testcases , these should be inserted into pdf and that pdf should be uploaded to server or anywhere so that the recruiter can see the output accordingly.
+Now there are some streps that are needed to be taken like --> According to the question you need to create some sample test cases . That sample test case should be given in the question so that user can use that sample testcase to judge its output.Atlast there should be some hidden testcases referred to every question and that code should be judged on the basis of these test cases and whatever will be the output of these testcases , these should be inserted into pdf and that pdf should be uploaded to server or anywhere so that the recruiter can see the output accordingly.
 
-There can be some advance features like Time limit exceeded or Memory Limit Exceeded.which we can add accordingly.
+There can be some advance features like Time limit exceeded or Memory Limit Exceeded.which we can add accordingly
+
+--> Current problem is that the name of the languages provided by rapidapi and monaco editor are different.
+that's where the api call is gettin disrupted . Now to use the particular language for both monaco and rapidapi , i need some function which is going to tell me that this language of monaco editor represents to that language of rapid api.
+Fot that firstly i need to retrieve all the languages of monaco and rapid api.
+After that the function will work accordingly.  -------> DONE
+
+Now According to every language there should be some default syntax provied on the editor.That syntax is going to be fixed for every language --> Like input can be provided in the input section rest all user's wish
