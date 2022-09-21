@@ -11,7 +11,11 @@ There can be some advance features like Time limit exceeded or Memory Limit Exce
 
 --> Current problem is that the name of the languages provided by rapidapi and monaco editor are different.
 that's where the api call is gettin disrupted . Now to use the particular language for both monaco and rapidapi , i need some function which is going to tell me that this language of monaco editor represents to that language of rapid api.
-Fot that firstly i need to retrieve all the languages of monaco and rapid api.
+For that firstly i need to retrieve all the languages of monaco and rapid api.
 After that the function will work accordingly.  -------> DONE
 
 Now According to every language there should be some default syntax provied on the editor.That syntax is going to be fixed for every language --> Like input can be provided in the input section rest all user's wish
+
+On clicking run we can create two senarios , Firstly we can simply show the output according to the input and that's it , Secondly we can compare that output to the real , Correct output and can show user's output and also whether that output is correct or not.
+
+OnClicking submit there should be some sample testcases which are going to be tested acc. to the code of user.

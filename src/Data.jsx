@@ -10,6 +10,10 @@ const DefaultCode = () => {
   return str1 + str2 + str3;
 };
 
+// [1,2,3,2,1]
+// [1,2,3,2,1]
+
+
 const Data = ({ children }) => {
 
   const [code, setCode] = useState(DefaultCode());

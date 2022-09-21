@@ -1,8 +1,9 @@
 import React, { useContext, useState } from "react";
 import "./css/RightPanel.css";
 import { context } from "./Data";
-import { BeatLoader } from "react-spinners";
+import {PulseLoader } from "react-spinners";
 import { BiReset } from "react-icons/bi";
+import ReactTooltip from "react-tooltip"
 
 function RightPanel() {
   // const secretKey1 = "b27af1dbccmshfd2a44f218b824ap1adcf5jsn6125851982dc";
@@ -16,7 +17,7 @@ function RightPanel() {
   const [output, setOutput] = useState("Your output comes here");
   const [showLoader, setShowLoader] = useState(false);
 
-  const sendReq = () => {
+  const runCode = () => {
     setShowLoader(!showLoader);
 
     const str4 = "fun(input)\n";
@@ -64,7 +65,11 @@ function RightPanel() {
           .then((response) => response.json())
           .then((response) => {
             if (response.status.id == 3) {
-              setOutput(response.stdout);
+              if(response.stdout == "" || response.stdout == null){
+                setOutput("");
+              }else{
+                setOutput(response.stdout);
+              }
             } else {
               setOutput(response.stderr);
             }
@@ -80,11 +85,14 @@ function RightPanel() {
           });
       })
       .catch((err) => {
-        // console.error("Internal Server Error") 
         setOutput(err);
         setShowLoader((showLoader) => !showLoader);
       });
   };
+
+  const submitCode = () => {
+      alert("hello")
+  }
 
   const resetInput = () => {
     setInput("");
@@ -93,7 +101,15 @@ function RightPanel() {
   return (
     <div className="RightPanel">
       <div className="RightReset">
-        <BiReset className="Reset" onClick={resetInput} />
+        <BiReset className="Reset" data-for="reset-input" data-tip="Reset the input"  onClick={resetInput} />
+        <ReactTooltip
+          id="reset-input"
+          delayShow={500}
+          delayHide={0}
+          textColor="black"
+          backgroundColor="white"
+          effect="solid"
+        />
       </div>
       <div className="Space"></div>
       <textarea
@@ -102,11 +118,11 @@ function RightPanel() {
         className="Input"
       />
       <div className="buttons">
-        <button onClick={sendReq}>RUN</button>
-        <button onClick={() => alert("yet to be completed")}>SUBMIT</button>
+        <button onClick={runCode}>Run</button>
+        <button onClick={submitCode}>Submit</button>
       </div>
       {showLoader ? (
-        <BeatLoader className="Output Loader" size={20} color="white" />
+        <PulseLoader className="Output Loader" size={20} color="white" />
       ) : (
         <textarea className="Output" value={output} readOnly={true} />
       )}
