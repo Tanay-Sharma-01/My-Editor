@@ -17,6 +17,8 @@ const DefaultCode = () => {
 const Data = ({ children }) => {
 
   const [code, setCode] = useState(DefaultCode());
+  // this code is used to set the code present on the editor...
+
   const [input, setInput] = useState("");
   const [languages, setLanguages] = useState({
     "javascript": 63,
